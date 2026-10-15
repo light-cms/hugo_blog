@@ -35,6 +35,7 @@ jobs:
             mise trust
             mise deps
             mise run build
+            mise run index
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@main
