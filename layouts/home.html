@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>Hello, Hugo.</h1>
+  <p>{{ .Site.Params.description }}</p>
+  <p>
+    <a class="button" href="{{ "posts/" | relURL }}">Read the posts</a>
+    <a class="button secondary" href="{{ "about/" | relURL }}">About</a>
+  </p>
+</section>
+
+<section>
+  <h2>Latest posts</h2>
+  <ul class="post-list">
+    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="muted"> — {{ .Date.Format "January 2, 2006" }}</span>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

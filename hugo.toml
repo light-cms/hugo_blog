@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Hugo Blog'
+
+[params]
+  description = 'A basic displayable Hugo blog boilerplate.'
